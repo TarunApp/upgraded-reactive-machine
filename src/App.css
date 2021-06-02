@@ -10,7 +10,7 @@
   color: white;
 }
 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 .b {
     background-color: black;
@@ -27,12 +27,45 @@
 
 .main-header {
     margin-top: 150px;
-    font-family: Consolas;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 50px;
     margin-left: 50px;
+}
+
+.projects{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+}
+
+.landing{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 50px;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card{
+    height: 200px;
+    width: 50%;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.card h1{
+    font-family: 'Poppins';
+    text-align: center;
 }
 
 .nav a {
@@ -42,8 +75,8 @@
     padding-right: 15px;
     padding-left: 15px;
     font-size: 18px;
-    background-color: #FF8552;
-    font-family: 'Poppins', sans-serif;
+    background-color: #ff8552;
+    font-family: "Poppins", sans-serif;
     color: black;
     font-weight: bolder;
     text-decoration: none;
@@ -51,24 +84,24 @@
     border-color: #001524;
 }
 
-.content{
-  font-size: 25px;
+.content {
+    font-size: 25px;
 }
 
-.footer{
-  background-color: #73628A;
-  position:  absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
+.footer {
+    background-color: #73628a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: "Poppins", sans-serif;
 }
 
-.footer a{
-  color: #3C3744;
-  font-weight: bold;
-  font-size: 20px;
+.footer a {
+    color: #3c3744;
+    font-weight: bold;
+    font-size: 20px;
 }

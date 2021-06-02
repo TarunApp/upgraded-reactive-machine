@@ -1,6 +1,11 @@
+import Card from './Card'
+
 const Projects = (props) => {
-	return <h1>Projects</h1>
-}
+	return (
+		<div className="projects">
+			<Card/>	
+		</div>
+	);
+};
 
-
-export default Projects
+export default Projects;

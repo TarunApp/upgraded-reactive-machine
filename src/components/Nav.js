@@ -1,22 +1,20 @@
-import '../App.css';
+import "../App.css";
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  NavLink,
-} from 'react-router-dom'
+	BrowserRouter as Router,
+	Route,
+	Switch,
+	NavLink,
+} from "react-router-dom";
 
 const Nav = (props) => {
 	return (
-
 		<nav className="nav">
-			<NavLink to='/about'>About</NavLink>
-			<NavLink to='/projects'>Projects</NavLink>
+			<NavLink className="box-shadow-xxl" to="/about">About</NavLink>
+			<NavLink className="box-shadow-xxl" to="/projects">Projects</NavLink>
+			<a className="box-shadow-xxl" href="https://github.com/TarunApp" target="_blank">GitHub</a>
+			<NavLink className="box-shadow-xxl" to="/blog">Blog</NavLink>
 		</nav>
-	
-		)
-}
+	);
+};
 
-
-
-export {Nav}
+export { Nav };
