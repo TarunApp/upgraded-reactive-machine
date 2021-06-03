@@ -1,9 +1,10 @@
-import Card from './Card'
+import Card from "./Card";
 
 const Projects = (props) => {
 	return (
 		<div className="projects">
-			<Card/>	
+			<Card />
+			<Card />
 		</div>
 	);
 };
