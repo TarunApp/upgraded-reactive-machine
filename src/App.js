@@ -4,6 +4,9 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Landing from './components/Landing'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Blog from './Blog/Blog'
+import posts from './Blog/Posts'
+
 
 function App() {
   document.body.style.backgroundColor = "#CBC5EA";
@@ -14,9 +17,13 @@ function App() {
           <Nav />
         </header>
         <Switch>
-          <Route path="/about" component={Home} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/" component={Home} />
+          <Route exact path="/about" component={Home} />
+          <Route exact path="/projects" component={Projects} />
+          <Route exact path="/blog" component={Blog} />
+          <Route exact path="/" component={Home} />
+                  {posts.map((item) => {
+          return  <Route exact path={"/" + `${item.name}`} component={item.content}/>
+        })} 
         </Switch>
       </div>
     </Router>
