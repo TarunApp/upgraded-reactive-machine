@@ -6,10 +6,13 @@ import Landing from './components/Landing'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Blog from './Blog/Blog'
 import posts from './Blog/Posts'
+import BlogContainer from './Blog/BlogContainer'
 
 
 function App() {
   document.body.style.backgroundColor = "#CBC5EA";
+
+
   return (
     <Router>
       <div className="App">
@@ -21,8 +24,8 @@ function App() {
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/" component={Home} />
-                  {posts.map((item) => {
-          return  <Route exact path={"/" + `${item.name}`} component={item.content}/>
+        {posts.map((item) => {
+          return  <Route exact path={"/" + `${item.name}`} component={BlogContainer(item.content)} />
         })} 
         </Switch>
       </div>

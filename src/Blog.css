@@ -1,0 +1,23 @@
+.blog p{
+	padding-right: 50px;
+	padding-left: 50px;
+	text-align: justify;
+	font-size: 25px;
+}
+
+.blog h1{
+	font-size: 60px;
+}
+
+.blog div{
+	font-family: 'Poppins';
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+ 	.blog p{
+ 		font-size: 14px;
+ 	} 
+ 	.blog h1{
+ 		font-size: 50px;
+ 	}
+}
