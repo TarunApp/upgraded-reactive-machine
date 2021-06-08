@@ -1,30 +1,26 @@
 import os
 import json
 
-files = os.listdir()
+files = os.listdir('Posts')
 mdx = list(filter(lambda item: '.mdx' in item, files))
-
 
 bigstring = """
 """
-
-for i in mdx:
-	bigstring = bigstring + "import {} from '!babel-loader!@mdx-js/loader!./{}.mdx'".format(i.split('.')[0],i.split('.')[0]) + "\n"
-
 posts = []
 s = """"""
-for i in mdx:
-	jsmdx = "{name: " + '"{}"'.format(i.split(".")[0]) + "," + "content: " + i.split(".")[0] + "}".strip("'")
-	s = s + jsmdx + ","
-	# m = {'name': i.split(".mdx")[0], 'content': i.split(".mdx")[0]}
-	# posts.append(m)
+if(len(mdx) != 0):
+	for i in mdx:
+		if(mdx.count(i) <= 1):
+			bigstring = bigstring + "import {} from '!babel-loader!@mdx-js/loader!./Posts/{}.mdx'".format(i.split('.')[0],i.split('.')[0]) + "\n"
+			jsmdx = "{name: " + '"{}"'.format(i.split(".")[0]) + "," + "content: " + i.split(".")[0] + "}".strip("'")
+			s = s + jsmdx + ","
+		else:
+			print("Error, duplicate file name")	
+else:
+	print("No files listed")
 
-
-# s = """"""
-# for i in posts:
-# 	s = s + i + ", "
-# js = "let posts = " + "[" +  s + "]"
-# print(js)
 s = "let posts = " + "[" + s + "]" + "\n"
 with open('Posts.js', 'w') as filewrite:
 	filewrite.write("""/* eslint-disable import/no-webpack-loader-syntax */ \n{} \n{} \nexport default posts""".format(bigstring, s))			
+
+print("Files Updated")
