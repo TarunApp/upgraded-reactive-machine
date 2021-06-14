@@ -87,12 +87,23 @@
     font-size: 20px;
 }
 
+.projects-row{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+}
+
 .projects {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.projects input {
+    width:  200px;
 }
 
 .main-landing {

@@ -3,7 +3,7 @@ import { Nav } from "./components/Nav";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Landing from './components/Landing'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch,Redirect } from "react-router-dom";
 import Blog from './Blog/Blog'
 import posts from './Blog/Posts'
 import BlogContainer from './Blog/BlogContainer'
@@ -27,6 +27,8 @@ function App() {
         {posts.map((item) => {
           return  <Route exact path={"/" + `${item.name}`} component={BlogContainer(item.content)} />
         })} 
+          <Route render={() => <Redirect to="/" />} />
+        
         </Switch>
       </div>
     </Router>
