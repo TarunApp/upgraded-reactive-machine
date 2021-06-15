@@ -1,8 +1,11 @@
-.blog p{
+.blog {
 	padding-right: 50px;
 	padding-left: 50px;
 	text-align: justify;
-	font-size: 25px;
+}
+
+.blog p{
+	font-size: 20px;
 }
 
 .blog h1{

@@ -1,11 +1,11 @@
-const Card = ({languages}) => {
+const Card = (props) => {
 	return (
 		<div className="card">
-			<h1>Card Title</h1>
+			<h1>{props.name}</h1>
 			<div className="card-flex">
 				<div className="card-one">
 					<h2>Project Details</h2>
-					<p>{languages}</p>
+					<p>{props.languages}</p>
 				</div>
 				<div className="card-content">
 					<a href="https://github.com">GitHub</a>
