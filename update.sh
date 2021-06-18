@@ -1,3 +1,3 @@
 cd src/Blog && python post.py
-npm build
+npm run build
 git add .
