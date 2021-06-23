@@ -18,7 +18,7 @@ const Projects = (props) => {
 	},[])
 
 	let onInput = (e) => {
-		SetInput(e.target.value)
+		SetInput(e.target.value.toLowerCase())
 	}
 
 				// {input.length != "" ? posts.filter((item) => item.name.includes(input)).map(item => <li key={item.languages}>{item.name}</li>) : posts.map((item) => <li key={item.languages}>{item.name}</li>)}
@@ -26,7 +26,7 @@ const Projects = (props) => {
 		<div className="projects">
 			<label htmlFor="search"><h2>Search: {input}</h2></label>
 			<input className="search" name="search" onChange={onInput} value={input} type="text"/>
-			{projects.length > 0 ? input == "" ? projects.map(item => <Card name={item.name} languages={item.language}/>) : projects.filter((item) => item.name.includes(input)).map(item => <Card name={item.name} languages={item.language}/>) : <p>loading</p>}
+			{projects.length > 0 ? input == "" ? projects.map(item => <Card name={item.name} languages={item.language}/>) : projects.filter((item) => item.name.toLowerCase().includes(input)).map(item => <Card name={item.name} languages={item.language}/>) : <p>loading</p>}
 		</div>
 	);
 };
