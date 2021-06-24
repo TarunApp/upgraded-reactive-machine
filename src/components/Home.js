@@ -22,6 +22,12 @@ const Home = (props) => {
         			</ul>
         		</div>
         	</div>
+        	<div>
+        		<h1>Learning Resources</h1>
+        		<ul>
+        			<li><a href="">FreeCodeCamp</a></li>
+        		</ul>
+        	</div>
 		</div>
     )
 }
