@@ -9,6 +9,10 @@ const Home = (props) => {
 	// 	.then(data => data.json())
 	// 	.then(x => SetQuote(x))
 	// },[])
+	useEffect(() => {
+		props.theme()
+	})
+
 
     return (
         <div className="main-header">
@@ -21,12 +25,7 @@ const Home = (props) => {
         				<li>Email: asdjk@test.com</li>
         			</ul>
         		</div>
-        	</div>
-        	<div>
-        		<h1>Learning Resources</h1>
-        		<ul>
-        			<li><a href="">FreeCodeCamp</a></li>
-        		</ul>
+        		
         	</div>
 		</div>
     )
