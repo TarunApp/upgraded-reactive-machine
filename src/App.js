@@ -28,7 +28,7 @@ function App() {
 
   const theme = () => {
     if(document.body.style.backgroundColor != '#0892A5'){
-      document.body.style.backgroundColor = '#0892A5'
+      document.body.style.backgroundColor = '#00A676'
     }
   }
 

@@ -10,7 +10,7 @@ const Nav = ({resprop}) => {
 			<NavLink  name="projects" className="box-shadow-xxl" to="/projects">Projects</NavLink>
 			<a className="box-shadow-xxl" href="https://github.com/TarunApp" target="_blank" rel="noreferrer">GitHub</a>
 			<NavLink  name="blog" className="box-shadow-xxl" to="/blog">Blog</NavLink>
-			<NavLink onClick={resprop}  name="resume" className="box-shadow-xxl" to="/resume">Resume</NavLink>
+			{/*<NavLink onClick={resprop}  name="resume" className="box-shadow-xxl" to="/resume">Resume</NavLink>*/}
 		</nav>
 	);
 };
