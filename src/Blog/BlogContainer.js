@@ -2,7 +2,7 @@ import '../Blog.css'
 
 const BlogContainer = Component => ({...props}) => {
 	return (
-		<div className="blog main-landing margin-top-xl">
+		<div>
 			<div>
 			<Component {...props}/>
 			</div>

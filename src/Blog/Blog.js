@@ -6,9 +6,9 @@ import { BrowserRouter as Router, Route, Switch, NavLink, Link } from "react-rou
 const Blog = () => {
 
 	return (
-		<div className="main-landing">
-    <div className="contact box-shadow-m">
-      <h1 className="padding-top-s">Blog</h1>
+    <div>
+    <div>
+      <h1>Blog</h1>
       <p>Writing Stuffs</p>
       <ul>
         {posts.map((item) => {

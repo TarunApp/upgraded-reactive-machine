@@ -1,18 +1,43 @@
-import "../App.css";
-import {
-	NavLink,
-} from "react-router-dom";
+import React from 'react'
+import styled from 'styled-components'
+import {NavLink} from 'react-router-dom'
 
-const Nav = ({resprop}) => {
+const NavBar = styled.div`
+margin-top: 100px;
+margin-bottom: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+a {
+	color: black;
+	text-decoration: none;
+	margin-right: 10px;
+	background: #FF8C42;
+	padding: 8px;
+	font-family: 'Poppins';
+	border-radius: 5px;
+	font-weight: bold;
+	border: solid;
+	border-color: black;
+	border-width: 2px;
+}
+
+`
+
+const Nav = (props) => {
+
 	return (
-		<nav className="nav">
-			<NavLink onClick={resprop}  name="about" className="box-shadow-xxl" to="/about">About</NavLink>
-			<NavLink  name="projects" className="box-shadow-xxl" to="/projects">Projects</NavLink>
-			<a className="box-shadow-xxl" href="https://github.com/TarunApp" target="_blank" rel="noreferrer">GitHub</a>
-			<NavLink  name="blog" className="box-shadow-xxl" to="/blog">Blog</NavLink>
-			{/*<NavLink onClick={resprop}  name="resume" className="box-shadow-xxl" to="/resume">Resume</NavLink>*/}
-		</nav>
-	);
-};
+		<div>
+			<NavBar>
 
-export { Nav };
+				<NavLink to="/about">About</NavLink>
+				<NavLink to="/projects">Projects</NavLink>
+
+			</NavBar>
+		</div>
+		)
+
+}
+
+export default Nav
