@@ -18,6 +18,9 @@ const Center = styled.div`
 	@media (max-width: 768px) {
 
 	}
+	p {
+		font-family: 'Poppins';
+	}
 `
 
 const Column = styled.div`
@@ -41,8 +44,8 @@ const Row = styled.div`
 	}
 `
 
-const Title = styled.div`
-	font-size: 50px;
+const Title = styled.h2`
+	font-size: 25px;
 	font-weight: bold;
 	text-align: center;
 	@media (max-width: 768px) {

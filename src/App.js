@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './components/Nav'
 import Projects from './components/Projects'
 import {About} from './components/About'
+import Intro from './components/Intro'
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -32,6 +33,7 @@ function App(){
 
     <Switch>
      <Route exact path="/projects" component={Projects} />
+     <Route exact path="/about" component={Intro}/>
      <Route render={() => <Redirect to="/about"/> } />
     </Switch>
 
