@@ -89,7 +89,18 @@ const LinkButton = styled.a`
 		border-radius: 5px;
 		border: 2px solid black;
 		margin-right: 5px;
+
+	@media (max-width: 768px) {
+		width: 20%;
+	}
 `
+
+const ResponsiveRow = styled.div`
+	display: flex;
+	flex-direction: row;
+	padding: 5px;
+`
+
 
 const Nav = styled.div`
 	display: flex;
@@ -105,6 +116,13 @@ const Nav = styled.div`
 		margin-right: 10px;
 		border: 2px solid #99B2DD;
 	}
+
+	@media (max-width: 768px) {
+		font-size: 12px;
+		padding: 5px;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
 `
 
-export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav}
+export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow}

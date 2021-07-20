@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import {Column, Row, MainTitle, Projects, Card, LinkButton, Nav} from './Styles'
+import {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow} from './Styles'
 
 function App(){
   return (
@@ -15,10 +15,10 @@ function App(){
           <h1>Hello</h1>
           <p>My name is Tarun and I'm a Full-Stack Developer focusing on JavaScript and Node.js.</p>
           <p>I'm always looking forward to working with people to build great things!</p>
-          <Row>
+          <ResponsiveRow>
           <LinkButton color="#ACC8E5" href="https://github.com/tarunapp">GitHub</LinkButton>
           <LinkButton color="#ACC8E5" href="https://www.linkedin.com/in/tarun-appannagari-97a16a189">LinkedIn</LinkButton>
-          </Row>
+          </ResponsiveRow>
         </MainTitle>
 
 
