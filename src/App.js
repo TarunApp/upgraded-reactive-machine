@@ -8,14 +8,14 @@ function App(){
 
         <MainTitle>
           <Nav>
-          <a href="https://github.com/tarunapp">About</a>
-          <a href="https://github.com/tarunapp">Projects</a>
-          <a href="https://github.com/tarunapp">Experience</a>
+          <a href="https://tarunapp.github.io">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
           </Nav>
           <h1>Hello</h1>
           <p>My name is Tarun and I'm a Full-Stack Developer focusing on JavaScript and Node.js.</p>
           <p>I'm always looking forward to working with people to build great things!</p>
-          <ResponsiveRow>
+          <ResponsiveRow margintop="4px">
           <LinkButton color="#ACC8E5" href="https://github.com/tarunapp">GitHub</LinkButton>
           <LinkButton color="#ACC8E5" href="https://www.linkedin.com/in/tarun-appannagari-97a16a189">LinkedIn</LinkButton>
           </ResponsiveRow>
@@ -23,7 +23,7 @@ function App(){
 
 
 
-        <Projects>
+        <Projects id="projects">
           <h2>Projects</h2>
           <Row center>
             <Card>
@@ -56,7 +56,7 @@ function App(){
           </Row>
         </Projects>
 
-        <Projects>
+        <Projects id="exp">
           <h2>Experience</h2>
           <Row center>
             <Card>
@@ -69,7 +69,7 @@ Programming along with a team of 10 students.</p></li>
             </Card> 
 
             <Card>
-              <h3>Digital Storytelling Project - Development Lead</h3> 
+              <h3>RiTUAL Lab - Research Assistant</h3> 
               <hr/>
               <ul>
                 <li><p>Worked at NLP-oriented research lab, Ritual at the University of Houston. Reported to & assisted graduate students with
