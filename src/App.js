@@ -1,87 +1,24 @@
-import React, {Fragment} from 'react'
-import {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow} from './Styles'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  Column, 
+} from "./Styles";
+import Landing from "./components/Landing";
+import Main from "./components/Main";
+import Resources from "./components/Resources";
 
-function App(){
+function App() {
   return (
-      <Fragment>
+    <Router>
       <Column>
-
-        <MainTitle>
-          <Nav>
-          <a href="https://tarunapp.github.io">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          </Nav>
-          <h1>Hello</h1>
-          <p>My name is Tarun and I'm a Full-Stack Developer focusing on JavaScript and Node.js.</p>
-          <p>I'm always looking forward to working with people to build great things!</p>
-          <ResponsiveRow margintop="4px">
-          <LinkButton color="#ACC8E5" href="https://github.com/tarunapp">GitHub</LinkButton>
-          <LinkButton color="#ACC8E5" href="https://www.linkedin.com/in/tarun-appannagari-97a16a189">LinkedIn</LinkButton>
-          </ResponsiveRow>
-        </MainTitle>
-
-
-
-        <Projects id="projects">
-          <h2>Projects</h2>
-          <Row center>
-            <Card>
-              <h3>Digital Storytelling Project</h3> 
-              <p>Web App that serves as a platform for learning Python.</p>
-              <hr/>
-              <a href="https://github.com/tarunapp">GitHub</a>
-            </Card> 
-
-             <Card>
-              <h3>Personal Website</h3> 
-              <p>Created personal website containing a blog using MDX and Git Hooks.</p>
-              <hr/>
-              <a href="https://github.com/tarunapp">GitHub</a>
-            </Card> 
-
-            <Card>
-              <h3>JobLists</h3> 
-              <p>Keep track of your job applications.</p>
-              <hr/>
-              <a href="https://github.com/tarunapp">GitHub</a>
-            </Card> 
-
-            <Card>
-              <h3>LiNCE</h3> 
-              <p>Developed tools for backend and built front-end components as a research assistant.</p>
-              <hr/>
-              <a href="https://github.com/tarunapp">GitHub</a>
-            </Card> 
-          </Row>
-        </Projects>
-
-        <Projects id="exp">
-          <h2>Experience</h2>
-          <Row center>
-            <Card>
-              <h3>Digital Storytelling Project - Development Lead</h3> 
-              <hr/>
-              <ul>
-                <li><p>Worked with the University of Houston Computer Science Department to develop a web app for teaching Python
-Programming along with a team of 10 students.</p></li>
-              </ul>
-            </Card> 
-
-            <Card>
-              <h3>RiTUAL Lab - Research Assistant</h3> 
-              <hr/>
-              <ul>
-                <li><p>Worked at NLP-oriented research lab, Ritual at the University of Houston. Reported to & assisted graduate students with
-collecting data, providing analytics, and organize textual data, for their NLP Models</p></li>
-              </ul>
-            </Card> 
-          </Row>
-        </Projects>
-
+      <Main/>
+        <Switch>
+        <Route exact path="/" component={Landing}/>
+        <Route path="/resources" component={Resources}/>
+        </Switch>
       </Column>
-      </Fragment>
-    )
+    </Router>
+  );
 }
 
-export default App
+export default App;

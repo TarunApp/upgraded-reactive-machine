@@ -9,6 +9,7 @@ const Row = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: ${props => props.center ? 'center' : 'none'};
+	align-items: ${props => props.align ? 'center' : 'none'};
 	@media (max-width: 768px) {
 		flex-direction: column;
 	}
@@ -37,10 +38,18 @@ const MainTitle = styled.div`
 
 const Projects = styled.div`
 	background: ${props => props.color || 'white'};
-	padding: 10px 10px 20px 10px;
+	padding: 10px 10px 26px 10px;
 	h2 {
 		font-family: "Inter";
 		font-size: 30px;
+		text-align: center;
+		color: black;
+	}
+	h4 {
+		padding: 10 10 10 10;
+		margin: 0 5px 0 0;
+		font-family: "Inter";
+		font-size: 20px;
 		text-align: center;
 		color: black;
 	}
@@ -62,11 +71,14 @@ const Card = styled.div`
 	}
 	a {
 		font-family: "Inter";
-		background: #353535;
-		color: white;
+		background: #ADB6C4;
+		color: black;
 		padding: 5px;
 		border-radius: 5px;
-		border: 2px solid #8A897C;
+		border: 2px solid #294C60;
+		border-width: 2.5px;
+		letter-spacing: 1.5px;
+		margin-right: 5px;
 	}
 	hr {
 		color: black;
@@ -78,7 +90,21 @@ const Card = styled.div`
 		margin-bottom: 10px;
 		width: 300px;
 	}
-	
+	span {
+		padding: 0;
+		margin: 0;
+		p {
+		font-family: "Inter";
+		background: #2D3142;
+		color: white;
+		padding: 5px;
+		border-radius: 5px;
+		border: 2px solid #ADACB5;
+		letter-spacing: 1.5px;
+		display: inline-block;
+		margin:0;
+		}
+	}
 `
 
 const LinkButton = styled.a`
@@ -126,4 +152,15 @@ const Nav = styled.div`
 	}
 `
 
-export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow}
+const Select = styled.select`
+	border: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color: white;
+	background: #B0D7FF;
+	font-family: "Work Sans";
+	font-size: 15px;
+	padding: 5px 0 5px 0;
+`
+
+export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow, Select}
