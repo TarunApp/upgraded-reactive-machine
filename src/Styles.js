@@ -8,7 +8,8 @@ const Column = styled.div`
 const Row = styled.div`
 	display: flex;
 	flex-direction: row;
-	justify-content: ${props => props.center ? 'center' : 'none'};
+	flex-flow: row wrap;
+	justify-content: ${props => props.center ? 'center' : 'space-around'};
 	align-items: ${props => props.align ? 'center' : 'none'};
 	@media (max-width: 768px) {
 		flex-direction: column;
@@ -22,6 +23,7 @@ const MainTitle = styled.div`
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
+	color: #97BEC4;
 	h1 {
 		font-family: 'Inter';
 		font-size: 50px;
@@ -56,29 +58,34 @@ const Projects = styled.div`
 `
 
 const Card = styled.div`
-	background: #D2D7DF;
+	background: #E8F1F2;
+	color: #13293D;
 	border-radius: 5px;
-	border-width: 2px;
 	border: solid;
+	border-width: 1px;
 	border-color: #BDBBB0;
 
-	width: 500px;
-	padding: 20px;
+	width: 300px;
+	padding: 30px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 	h3 {
 		font-family: "Inter";
 		font-size: 20px;
 	}
+	p {
+		font-size: 17px;
+	}
 	a {
 		font-family: "Inter";
-		background: #ADB6C4;
-		color: black;
-		padding: 5px;
+		font-size: 16px;
+		background: #13293D;
+		color: #86ADD5;
+		padding: 6px;
 		border-radius: 5px;
-		border: 2px solid #294C60;
-		border-width: 2.5px;
-		letter-spacing: 1.5px;
+		border: 2px none #294C60;
 		margin-right: 5px;
+		text-decoration: none;
 	}
 	hr {
 		color: black;
@@ -95,12 +102,11 @@ const Card = styled.div`
 		margin: 0;
 		p {
 		font-family: "Inter";
-		background: #2D3142;
-		color: white;
-		padding: 5px;
+		font-size: 16px;
+		background: #F7A5A1;
+		color: black;
+		padding: 6px;
 		border-radius: 5px;
-		border: 2px solid #ADACB5;
-		letter-spacing: 1.5px;
 		display: inline-block;
 		margin:0;
 		}
@@ -110,11 +116,12 @@ const Card = styled.div`
 const LinkButton = styled.a`
 	font-family: "Inter";
 		color: black;
-		background: ${props => props.color || '#353535'};
+		font-size: 18px;
+		text-decoration: none;
+		background: ${props => props.color || '#E27365'};
 		padding: 5px 10px 5px 10px;
-		border-radius: 5px;
-		border: 2px solid black;
-		margin-right: 5px;
+		border-radius: 4px;
+		margin-right: 10px;
 
 	@media (max-width: 768px) {
 		width: 20%;
@@ -135,13 +142,12 @@ const Nav = styled.div`
 	justify-content: flex-end;
 	a {
 		font-family: "Inter";
-		font-size: 15px;
-		background: black;
-		color: white;
+		font-size: 18px;
+		background: #F7A5A1;
+		color: black;
 		border-radius: 20px;
 		padding: 10px 20px 10px 20px;
 		margin-right: 10px;
-		border: 2px solid #99B2DD;
 	}
 
 	@media (max-width: 768px) {

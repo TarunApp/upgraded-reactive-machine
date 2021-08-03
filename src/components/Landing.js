@@ -6,6 +6,8 @@ const Landing = (props) => {
 		<Column>
 <Projects id="projects">
           <h2>Projects</h2>
+        <p style={{fontSize: "18px", textAlign: 'center'}}>The projects I have worked on. Currently working on revamping Digital Storytelling & developing JobLists.</p>
+
           <Row center>
             <Card>
               <h3>Digital Storytelling Project</h3> 
@@ -39,6 +41,7 @@ const Landing = (props) => {
 
         <Projects id="exp">
           <h2>Experience</h2>
+        <p style={{fontSize: "18px", textAlign: 'center'}}>My previous experience as a developer. I love working on collaborative teams to build great things.</p>
           <Row center>
             <Card>
               <h3>Digital Storytelling Project - Development Lead</h3> 

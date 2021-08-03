@@ -16,7 +16,19 @@ const Links = [
 		content: "From Matthias Wandel's website. Tim Huskin provides a great deal of information for a wide variety of topics.",
 		link: "https://www.rudimentsofwisdom.com/default.htm",
 		type: "article"
-	}
+	},
+	{
+		title: "Dev.to",
+		content: "Great website for sharing web development and programming knowledge",
+		link: "https://dev.to",
+		type: "website"
+	},
+	{
+		title: "WeLearnCode",
+		content: "Ali Spittel created a great resource for learning web development with tutorials, blog posts, and more",
+		link: "https://welearncode.com/",
+		type: "website"	
+	},
 ]
 
 export {Links}

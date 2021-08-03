@@ -1,4 +1,3 @@
-import '../Blog.css'
 
 const BlogContainer = Component => ({...props}) => {
 	return (
