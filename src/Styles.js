@@ -169,4 +169,27 @@ const Select = styled.select`
 	padding: 5px 0 5px 0;
 `
 
-export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow, Select}
+const BlogContent = styled.div`
+	background: white;
+	padding: 50px;
+	h1 {
+		text-align: center;
+		font-family: "Inter";
+	}
+	p {
+		font-size: 25px;
+	}
+	code {
+		border-radius: 5px;
+		padding: 10px;
+		display: block;
+		margin: 0;
+		font-size: 25px;
+		white-space:pre-wrap; 
+		word-wrap:break-word;
+		font-family: 'Roboto Mono';
+
+	}
+`
+
+export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow, Select, BlogContent}

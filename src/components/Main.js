@@ -2,7 +2,9 @@ import {MainTitle, LinkButton, Nav, ResponsiveRow} from '../Styles'
 import {Link} from "react-router-dom"
 
 const Main = (props) => {
-    // console.log(posts[0].title.replaceAll(" ", ''))
+
+    document.body.style.background = '#13293D';
+
 	return (
 		<MainTitle>
           <Nav>

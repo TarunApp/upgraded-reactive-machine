@@ -1,11 +1,13 @@
+import {BlogContent} from '../Styles.js'
+
 
 const BlogContainer = Component => ({...props}) => {
+
+	document.body.style.background = 'white';
 	return (
-		<div>
-			<div>
-			<Component {...props}/>
-			</div>
-		</div>
+			<BlogContent>
+				<Component />
+			</BlogContent>
 		)	
 }
 
