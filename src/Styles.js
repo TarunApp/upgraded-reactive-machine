@@ -58,10 +58,9 @@ const Projects = styled.div`
 `
 
 const Card = styled.div`
-	background: #E8F1F2;
+	background: #EBEEFE;
 	color: #13293D;
 	border-radius: 5px;
-	border: solid;
 	border-width: 1px;
 	border-color: #BDBBB0;
 
@@ -79,13 +78,16 @@ const Card = styled.div`
 	a {
 		font-family: "Inter";
 		font-size: 16px;
-		background: #13293D;
-		color: #86ADD5;
+		background: #FFE066;
+		color: black;
 		padding: 6px;
 		border-radius: 5px;
-		border: 2px none #294C60;
 		margin-right: 5px;
 		text-decoration: none;
+		&:hover{
+		position: relative;
+		bottom: 2px;	
+	}
 	}
 	hr {
 		color: black;
@@ -115,16 +117,22 @@ const Card = styled.div`
 
 const LinkButton = styled.a`
 	font-family: "Inter";
-		color: black;
+		color: white;
 		font-size: 18px;
 		text-decoration: none;
-		background: ${props => props.color || '#E27365'};
+		border: 2px solid #32936F;
+		color: #32936F;
 		padding: 5px 10px 5px 10px;
-		border-radius: 4px;
+		border-radius: 5px;
 		margin-right: 10px;
 
 	@media (max-width: 768px) {
 		width: 20%;
+	}
+
+	&:hover{
+		position: relative;
+		bottom: 2px;	
 	}
 `
 
@@ -141,12 +149,14 @@ const Nav = styled.div`
 	flex-direction: row;
 	justify-content: flex-end;
 	a {
+		text-decoration: none;
 		font-family: "Inter";
 		font-size: 18px;
-		background: #F7A5A1;
+		font-weight: bold;
+		background: #FFBF00;
 		color: black;
-		border-radius: 20px;
-		padding: 10px 20px 10px 20px;
+		border-radius: 10px;
+		padding: 10px;
 		margin-right: 10px;
 	}
 
@@ -173,23 +183,46 @@ const BlogContent = styled.div`
 	background: white;
 	padding: 50px;
 	h1 {
+		font-size: 50px;
 		text-align: center;
 		font-family: "Inter";
+		margin: 0;
+		padding-top: 25px;
+		padding-bottom: 15px;
 	}
 	p {
-		font-size: 25px;
+		font-size: 20px;
+		word-break: break-all;
+		text-align: justify;
 	}
 	code {
 		border-radius: 5px;
+		background: #EBEEFE;
+		border: 1px solid #D6D7D6;
 		padding: 10px;
 		display: block;
 		margin: 0;
-		font-size: 25px;
+		font-size: 15px;
 		white-space:pre-wrap; 
 		word-wrap:break-word;
 		font-family: 'Roboto Mono';
-
 	}
 `
 
-export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow, Select, BlogContent}
+const BlogNav = styled.div`
+	a{font-family: "Inter";
+		font-size: 20px;
+		background: #32936F;
+		color: white;
+		padding: 6px;
+		border-radius: 5px;
+		margin-right: 5px;
+		text-decoration: none;
+		&:hover{
+		position: relative;
+		bottom: 2px;		
+	}}
+`
+
+
+export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow, Select, BlogContent, BlogNav}

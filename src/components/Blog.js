@@ -9,7 +9,7 @@ const Blog = (props) => {
 				<Projects>
 					<h2>Blog</h2>
 					<p style={{ fontSize: "18px", textAlign: "center" }}>
-						Blog	
+						My writing stuff.
 					</p>
 					<Row center>
 					{/*<Card>
@@ -19,7 +19,6 @@ const Blog = (props) => {
 					{Posts.map(item => {
 						return <Card>
 							<h3>{item.name}</h3>
-							<p>{item.name}</p>
 							<Link to={item.name}>{item.name}</Link>
 						</Card>
 					})}

@@ -17,8 +17,9 @@ const Main = (props) => {
           <p>I'm always looking forward to working with people to build great things!</p>
           <p>Check out my projects & work experience below</p>
           <ResponsiveRow margintop="4px">
-          <LinkButton color="#E27365" href="https://github.com/tarunapp">GitHub</LinkButton>
-          <LinkButton color="#E27365" href="https://www.linkedin.com/in/tarun-appannagari-97a16a189">LinkedIn</LinkButton>
+          <LinkButton href="https://github.com/tarunapp">GitHub</LinkButton>
+          <LinkButton href="https://www.linkedin.com/in/tarun-appannagari-97a16a189">LinkedIn</LinkButton>
+          {/*<Link to="/tools">CSS Tools</Link>*/}
           </ResponsiveRow>
         </MainTitle>
 		)

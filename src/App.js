@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/resources" component={() => <> <Main/> <Resources/> </>} /> 
           <Route exact path="/blog" component={() => <> <Main/> <Blog/> </>} /> 
           {Posts.map(item => {
-            return <Route exact path={"/" + item.name} component={BlogContainer(item.content)}/>
+            return <Route key={1} exact path={"/" + item.name} component={BlogContainer(item.content)}/>
           })}
       </Switch>
       </Column>
