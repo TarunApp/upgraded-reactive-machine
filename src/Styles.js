@@ -74,6 +74,7 @@ const Card = styled.div`
 	}
 	p {
 		font-size: 17px;
+		font-family: "Work Sans";
 	}
 	a {
 		font-family: "Inter";
@@ -87,7 +88,7 @@ const Card = styled.div`
 		&:hover{
 		position: relative;
 		bottom: 2px;	
-	}
+		}
 	}
 	hr {
 		color: black;

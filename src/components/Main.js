@@ -1,5 +1,5 @@
 import {MainTitle, LinkButton, Nav, ResponsiveRow} from '../Styles'
-import {Link} from "react-router-dom"
+import {Link} from 'react-router-dom'
 
 const Main = (props) => {
 
@@ -11,6 +11,8 @@ const Main = (props) => {
           <Link to="/">About</Link>
           <a href="#projects">Projects</a>
           <Link to="/resources">Resources</Link>
+          <Link to="/blog">Blog</Link>
+
           </Nav>
           <h1>Hello</h1>
           <p>My name is Tarun and I'm a Full-Stack Developer focusing on JavaScript and Node.js.</p>

@@ -2,7 +2,9 @@ import { Column, Row, Projects, Card} from "../Styles";
 import Posts from '../Blog/Posts'
 import {Link} from 'react-router-dom'
 
+
 const Blog = (props) => {
+
 
 	return (
 			<Column>

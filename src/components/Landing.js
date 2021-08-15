@@ -24,13 +24,6 @@ const Landing = (props) => {
             </Card> 
 
             <Card>
-              <h3>JobLists</h3> 
-              <p>Keep track of your job applications.</p>
-              <hr/>
-              <a href="https://github.com/tarunapp">GitHub</a>
-            </Card> 
-
-            <Card>
               <h3>LiNCE</h3> 
               <p>Developed tools for backend and built front-end components as a research assistant.</p>
               <hr/>
