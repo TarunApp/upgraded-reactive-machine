@@ -115,6 +115,7 @@ dist
 # production
 /build
 /src/Res
+.storybook
 
 # misc
 .DS_Store
