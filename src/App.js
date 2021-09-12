@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import { Column } from "./Styles";
 import Landing from "./components/Landing";
@@ -19,7 +19,6 @@ function App() {
           <Route exact path="/" component={() => <div> <Main/> <Landing/></div>} />
           <Route exact path="/resources" component={() => <> <Main/> <Resources/> </>} /> 
           <Route exact path="/blog" component={() => <> <Main/> <Blog/> </>} /> 
-
 
           {Posts.map(item => {
             return <Route exact path={"/" + item.name} component={BlogContainer({date: item.date, heading: item.name})(item.content) }/>
