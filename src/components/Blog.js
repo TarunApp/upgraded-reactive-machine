@@ -1,9 +1,12 @@
-import { Column, Row, Projects, Card} from "../Styles";
+import { Column, Row, Projects} from "../Styles";
+import {BlogCard} from '../BlogStyles'
 import Posts from '../Blog/Posts'
 import {Link} from 'react-router-dom'
 
 
+
 const Blog = (props) => {
+
 
 
 	return (
@@ -11,7 +14,7 @@ const Blog = (props) => {
 				<Projects>
 					<h2>Blog</h2>
 					<p style={{ fontSize: "18px", textAlign: "center" }}>
-						My writing stuff.
+						Posts on Programming
 					</p>
 					<Row center>
 					{/*<Card>
@@ -19,10 +22,13 @@ const Blog = (props) => {
 						<p>Blog Post Content</p>
 					</Card>	*/}
 					{Posts.map(item => {
-						return <Card>
-							<h3>{item.name}</h3>
-							<Link to={item.name}>{item.name}</Link>
-						</Card>
+						return <BlogCard>
+							<h3> <Link to={item.name}>{item.name}</Link> </h3>
+						
+							<time>Date: {item.date} </time>
+							<hr/>
+							<p>{item.data.summary ? item.data.summary : ''}</p>
+						</BlogCard>
 					})}
 					</Row>
 				</Projects>	

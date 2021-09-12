@@ -1,5 +1,6 @@
 import os
 import json
+import time
 
 files = os.listdir('Posts')
 mdx = list(filter(lambda item: '.mdx' in item, files))
@@ -8,12 +9,14 @@ bigstring = """
 """
 posts = []
 s = """"""
+summarycount = 0
 if(len(mdx) != 0):
 	for i in mdx:
 		if(mdx.count(i) <= 1):
-			bigstring = bigstring + "import {} from '!babel-loader!@mdx-js/loader!./Posts/{}.mdx'".format(i.split('.')[0],i.split('.')[0]) + "\n"
-			jsmdx = "{name: " + '"{}"'.format(i.split(".")[0]) + "," + "content: " + i.split(".")[0] + "}".strip("'")
+			bigstring = bigstring + "import {}{} from '!babel-loader!@mdx-js/loader!./Posts/{}.mdx'".format(i.split('.')[0], ",{"+ "Summary as " + "Summary" + str(summarycount) + "}" ,i.split('.')[0]) + "\n"
+			jsmdx = "{name: " + '"{}"'.format(i.split(".")[0]) + "," + "content: " + i.split(".")[0] + ", " +  "date: " +  '"{}"'.format( str(time.ctime(os.path.getctime('Posts/' + i))) ) + ", data: " + "Summary".split('"')[0] + str(summarycount) +"}".strip("'")
 			s = s + jsmdx + ","
+			summarycount = summarycount + 1
 		else:
 			print("Error, duplicate file name")	
 else:

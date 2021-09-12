@@ -1,21 +1,28 @@
 import {BlogContent, BlogNav, Column} from '../Styles.js'
 import {Link} from 'react-router-dom'
 
-const BlogContainer = Component => ({...props}) => {
+const BlogContainer = (props) => (WrappedComponent) => (componentprops) => {
 
-	document.title = 'Blog'
-	document.body.style.background = 'white';
+	document.body.style.backgroundColor = 'white';
+
 
 	return (
-			<BlogContent>
+
+		<BlogContent>
 				<Column>
 				<BlogNav>
 					<Link to="/blog">Back to Blog</Link>	
 				</BlogNav>	
-				<Component />
+
+				<h1>{props.heading}</h1>
+				<p style={{textAlign: "center"}}> {props.date} </p>
+			<WrappedComponent {...componentprops} />
+
 				</Column>
 			</BlogContent>
-		)	
+		)
+
+
 }
 
 

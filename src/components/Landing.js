@@ -6,7 +6,6 @@ const Landing = (props) => {
 		<Column>
 <Projects id="projects">
           <h2>Projects</h2>
-        <p style={{fontSize: "18px", textAlign: 'center'}}>The projects I have worked on. Currently working on revamping Digital Storytelling & developing JobLists.</p>
 
           <Row center>
             <Card>

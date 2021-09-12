@@ -70,7 +70,7 @@ const Card = styled.div`
 	margin-bottom: 10px;
 	h3 {
 		font-family: "Inter";
-		font-size: 20px;
+		font-size: 25px;
 	}
 	p {
 		font-size: 17px;
@@ -115,6 +115,7 @@ const Card = styled.div`
 		}
 	}
 `
+
 
 const LinkButton = styled.a`
 	font-family: "Inter";
@@ -203,11 +204,9 @@ const BlogContent = styled.div`
 		padding: 10px;
 		display: block;
 		margin: 0;
-		font-size: 15px;
-		white-space:pre-wrap; 
-		word-wrap:break-word;
-		font-family: 'Roboto Mono';
+		font-size: 20px;
 	}
+
 `
 
 const BlogNav = styled.div`
