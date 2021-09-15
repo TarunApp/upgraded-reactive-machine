@@ -1,6 +1,8 @@
 import {MainTitle, LinkButton, Nav, ResponsiveRow} from '../Styles'
 import {Link} from 'react-router-dom'
 
+// Main Landing Page
+
 const Main = (props) => {
 
     document.body.style.background = '#13293D';

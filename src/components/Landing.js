@@ -28,6 +28,15 @@ const Landing = (props) => {
               <hr/>
               <a href="https://github.com/tarunapp">GitHub</a>
             </Card> 
+
+            <Card>
+              <h3>JobApps</h3> 
+              <p>Created using React.js, MongoDB, with the Node.js environment. Helps with easily 
+              managing job applications.
+              </p>
+              <hr/>
+              <a href="#projects">Launching Soon!</a>
+           </Card> 
           </Row>
         </Projects>
 

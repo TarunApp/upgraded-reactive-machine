@@ -3,6 +3,8 @@ import ResLink from "./ResLink";
 import { Links } from "./Links";
 import { useState } from "react";
 
+// Component for showing links to resources
+
 const Resources = (props) => {
 	const [topic, SetTopic] = useState("all");
 

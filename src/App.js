@@ -11,7 +11,6 @@ import BlogContainer from './Blog/BlogContainer'
 
 function App() {
 
-
   return (
     <Router>
       <Column>
@@ -20,8 +19,9 @@ function App() {
           <Route exact path="/resources" component={() => <> <Main/> <Resources/> </>} /> 
           <Route exact path="/blog" component={() => <> <Main/> <Blog/> </>} /> 
 
+        {/* Create routes for each post, move to React Router Nested Links*/}
           {Posts.map(item => {
-            return <Route exact path={"/" + item.name} component={BlogContainer({date: item.date, heading: item.name})(item.content) }/>
+            return <Route exact path={"/" + item.name} component={BlogContainer({date: item.date, heading: item.data.heading})(item.content) }/>
           })}
 
       </Switch>

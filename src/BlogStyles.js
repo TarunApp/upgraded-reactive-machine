@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 
+//Styled Components for Blog 
+
 const BlogCard = styled.div`
 	background: #EBEEFE;
 	color: #13293D;

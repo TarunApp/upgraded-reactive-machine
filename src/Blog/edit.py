@@ -11,5 +11,5 @@
 
 
 
-e = "Summary"
-print(e.split('"')[0])
+# e = os.path.getctime('Posts/' + "Start.mdx")
+# print(" ".join(time.ctime(e).split(" ")[1:3]), time.ctime(e).split(" ")[4])

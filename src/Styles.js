@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+// Styled Components for Website
+
 const Column = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -197,15 +199,7 @@ const BlogContent = styled.div`
 		word-break: break-all;
 		text-align: justify;
 	}
-	code {
-		border-radius: 5px;
-		background: #EBEEFE;
-		border: 1px solid #D6D7D6;
-		padding: 10px;
-		display: block;
-		margin: 0;
-		font-size: 20px;
-	}
+	
 
 `
 

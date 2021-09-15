@@ -1,3 +1,5 @@
+// Links for Resources component
+
 const Links = [
 	{
 		title: "Digital Storytelling with Python",
