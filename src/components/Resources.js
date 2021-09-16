@@ -1,11 +1,19 @@
 import { Column, Row, Projects, Select } from "../Styles";
 import ResLink from "./ResLink";
 import { Links } from "./Links";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 
 // Component for showing links to resources
 
+
 const Resources = (props) => {
+
+
+useEffect(() => {
+	document.title = "Resources"
+}, [])
+
+
 	const [topic, SetTopic] = useState("all");
 
 	const onSelect = (e) => {

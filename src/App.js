@@ -11,6 +11,8 @@ import BlogContainer from './Blog/BlogContainer'
 
 function App() {
 
+  document.title = "About"
+
   return (
     <Router>
       <Column>

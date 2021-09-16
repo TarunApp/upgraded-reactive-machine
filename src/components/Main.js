@@ -1,4 +1,4 @@
-import {MainTitle, LinkButton, Nav, ResponsiveRow} from '../Styles'
+import {NavContent, MainTitle, LinkButton, Nav, ResponsiveRow} from '../Styles'
 import {Link} from 'react-router-dom'
 
 // Main Landing Page
@@ -10,10 +10,13 @@ const Main = (props) => {
 	return (
 		<MainTitle>
           <Nav>
+
+          <NavContent>
           <Link to="/">About</Link>
-          <a href="#projects">Projects</a>
+          {/*<a href="#projects">Projects</a>*/}
           <Link to="/resources">Resources</Link>
           <Link to="/blog">Blog</Link>
+          </NavContent>
 
           </Nav>
           <h1>Hello</h1>

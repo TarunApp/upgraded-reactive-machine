@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 const BlogContainer = (props) => (WrappedComponent) => (componentprops) => {
   document.body.style.backgroundColor = "white";
 
+  document.title = props.heading
+
   return (
     <BlogContent>
       <Column>

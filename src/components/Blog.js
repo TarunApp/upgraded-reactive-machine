@@ -1,11 +1,21 @@
+import {useEffect} from 'react'
 import { Column, Row, Projects } from "../Styles";
 import { BlogCard } from "../BlogStyles";
 import Posts from "../Blog/Posts";
 import { Link } from "react-router-dom";
 
 // Component for listing Blog Cards
-
 const Blog = (props) => {
+
+
+useEffect( () => {
+
+  document.title="Blog"
+
+},[])
+
+
+
   return (
     <Column>
       <Projects>

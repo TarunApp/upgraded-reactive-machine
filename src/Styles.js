@@ -16,7 +16,6 @@ const Row = styled.div`
 	@media (max-width: 768px) {
 		flex-direction: column;
 	}
-	padding: 5px;
 `
 
 
@@ -57,6 +56,7 @@ const Projects = styled.div`
 		text-align: center;
 		color: black;
 	}
+	padding-bottom: 100px;
 `
 
 const Card = styled.div`
@@ -131,7 +131,7 @@ const LinkButton = styled.a`
 		margin-right: 10px;
 
 	@media (max-width: 768px) {
-		width: 20%;
+
 	}
 
 	&:hover{
@@ -161,14 +161,17 @@ const Nav = styled.div`
 		color: black;
 		border-radius: 10px;
 		padding: 10px;
-		margin-right: 10px;
+		margin: 5px;
 	}
 
 	@media (max-width: 768px) {
-		font-size: 12px;
+		font-size: 10px;
 		padding: 5px;
 		justify-content: center;
 		margin-bottom: 20px;
+		a {
+
+		}
 	}
 `
 
@@ -180,7 +183,6 @@ const Select = styled.select`
 	background: #B0D7FF;
 	font-family: "Work Sans";
 	font-size: 15px;
-	padding: 5px 0 5px 0;
 `
 
 const BlogContent = styled.div`
@@ -218,5 +220,11 @@ const BlogNav = styled.div`
 	}}
 `
 
+const NavContent = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+`
 
-export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow, Select, BlogContent, BlogNav}
+
+export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow, Select, BlogContent, BlogNav, NavContent}
