@@ -1,0 +1,77 @@
+export const Summary = {
+	meta: "Reduce amount of requests when web-scraping",
+	summary: "Learn how to make less requests to websites you use for web scraping",
+	heading: "Web Scraping with local version of pages",
+	id: 2
+}
+
+Web Scraping is a popular way to get data from website. There are numerous libraries available in different programming languages.
+
+
+Some of the popular libraries are BeautifulSoup and Scrapy. I have not used ScraPy, but I've worked with BeautifulSoup or also known as BS4 a whole lot. I really love this library because its simple and easy to work with, and there's great documentation for it. Here is a some code showing how to scrape a web page: 
+
+```python filename="test.py"
+//test.py
+
+from bs4 import BeautifulSoup
+import requests
+
+url = "https://www.basketball-reference.com/leagues/NBA_2021_totals.html"
+
+request = requests.get(url) 
+html = request.text 
+
+soup = BeautifulSoup(html, 'html.parser')
+
+```
+
+Lets take a look at what we did here. First we imported the BeautifulSoup and requests library. Then we define a variable `url` which stores the URL of the website we want to scrape. Using the requests library we make a GET request to the website and retreive the HTML markup. Then we load the HTML into the BeautifulSoup, we parse the data using Python's Parser. 
+
+You could go on parsing your data from here and re-running your script. Each time you run the file, you would make a request to the website. Or you could copy over the HTML markup to a local file and scrape the data from that file. 
+
+
+```python filename="test.py"
+//test.py
+
+from bs4 import BeautifulSoup
+import requests
+
+url = "https://www.basketball-reference.com/leagues/NBA_2021_totals.html"
+
+request = requests.get(url) 
+html = request.text 
+
+soup = BeautifulSoup(html, 'html.parser')
+
+with open("data.html", "w") as file:
+	file.write(soup)
+
+```
+
+We can simply write the HTML markup to a html file and read from it. After you create the file, you can comment out the code that writes to the file and read the contents of the file into BeautifulSoup. 
+
+```python filename="test.py"
+//test.py
+
+from bs4 import BeautifulSoup
+import requests
+
+#url = "https://www.basketball-reference.com/leagues/NBA_2021_totals.html"
+
+#request = requests.get(url) 
+#html = request.text 
+
+#soup = BeautifulSoup(html, 'html.parser')
+
+#with open("data.html", "w") as file:
+#	file.write(soup)
+
+with open("data.html", "r") as file:
+	soup = BeautifulSoup(file, 'html.parser')
+
+print(soup.find("tr"))
+
+```
+
+Now you are able to work with the file just as before when we were making `GET` requests each time we wanted to access the HTML content. I find that this way of scraping is helpful because it reduces the amount of time you have to wait for scraping from a website and leads to less requests made to the website.
+

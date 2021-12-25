@@ -24,8 +24,6 @@ const BlogCard = styled.div`
 		border-radius: 4px;
 
 		&:hover{
-			padding: 7px;
-			background: #D2D5DD;
 			text-decoration: underline;
 		}
 	}

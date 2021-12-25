@@ -1,7 +1,8 @@
 import {useEffect} from 'react'
-import { Column, Row, Projects } from "../Styles";
-import { BlogCard } from "../BlogStyles";
+import {Buttons, BlogLinks, TitleLink, Center, Column, Row, Nav } from '../Styles/Layout.js'
+import { BlogCard } from "../Styles/Layout.js";
 import Posts from "../Blog/Posts";
+import Footer from './Footer.js'
 import { Link } from "react-router-dom";
 
 // Component for listing Blog Cards
@@ -14,35 +15,45 @@ useEffect( () => {
 
 },[])
 
-
-
   return (
     <Column>
-      <Projects>
-        <h2>Blog</h2>
-        {/*<p style={{ fontSize: "18px", textAlign: "center" }}>
-						Posts on Programming
-					</p>*/}
-        <Row center>
-          {/*<Card>
-						<h3>First Blog Post</h3>
-						<p>Blog Post Content</p>
-					</Card>	*/}
-          {Posts.map((item) => {
-            return (
-              <BlogCard>
-                <h3>
-                  {" "}
-                  <Link to={item.name}>{item.data.heading}</Link>{" "}
-                </h3>
-                <time>Date: {item.date} </time>
-                <hr />
-                <p>{item.data.summary ? item.data.summary : ""}</p>
-              </BlogCard>
-            );
-          })}
-        </Row>
-      </Projects>
+    <Nav>
+    <Column>
+    <TitleLink href="/">TarunApp</TitleLink>
+      <Buttons margin="5px">  
+              <BlogLinks slab href="/">About</BlogLinks>
+              <BlogLinks slab href="/blog">Blog</BlogLinks>
+      </Buttons>
+
+
+  </Column>
+</Nav>
+
+<Center>
+          <Column>
+          <h2>Blog</h2>
+            <Row margintop="5px">
+           <Column margintop="5px">
+
+
+                {Posts.map((item) => {
+                  return (
+                    <BlogCard blog>
+                      <time>{item.date}</time> 
+                      <Link to={item.name}>{item.data.heading}</Link>
+                      <p>{item.data.summary ? item.data.summary : ""}</p>
+                    </BlogCard>
+                    )
+
+                })}
+
+          </Column> 
+            </Row>
+          </Column>
+        </Center>
+
+<Footer/>
+
     </Column>
   );
 };

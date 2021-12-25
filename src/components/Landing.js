@@ -39,6 +39,9 @@ const Landing = (props) => {
               <a href="#projects">Launching Soon!</a>
            </Card> 
           </Row>
+
+
+
         </Projects>
 
         <Projects id="exp">

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+// import {colors} from './colors.js'
 
 // Styled Components for Website
 
@@ -185,32 +186,101 @@ const Select = styled.select`
 	font-size: 15px;
 `
 
-const BlogContent = styled.div`
-	background: white;
-	padding: 50px;
+const HeadingContent = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
 	h1 {
-		font-size: 50px;
-		text-align: center;
+		font-size: 2em;
+		text-align: left;
 		font-family: "Inter";
 		margin: 0;
-		padding-top: 25px;
-		padding-bottom: 15px;
 	}
+
 	p {
-		font-size: 20px;
-		word-break: break-all;
-		text-align: justify;
+		margin: 0px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		color: #747474;
+		font-size: 1.4em;
 	}
-	
+
+	@media(max-width: 768px) {
+		h1 {
+			font-size: 25px;
+		}
+		p {
+			font-size: 15px;
+		}
+		margin-top: 0px;
+	}
+`
+
+const BlogText = styled.div`
+	p {
+		font-size: 1.1em;
+	}
+`
+
+const BlogContent = styled.div`
+	padding: 20px 200px 0 200px;
+	// p {
+	// 	font-size: 1em;
+	// 	word-break: break-all;
+	// 	text-align: justify;
+	// }
+
+ pre {
+ 		overflow: scroll;
+		border: 2px solid silver;
+		border-radius: 5px;
+		padding: 5px 10px 5px 10px;
+		background: #eaeef2;
+	code{
+		color: black;
+		font-size: 1.2em;
+		}
+	}
+
+	p {
+		font-size: 1.2em;
+		line-height: 1.5em;
+	code {
+		color: black;
+		padding: 4px;
+		background: #eaeef2;
+		border-radius: 5px;
+		font-size: 1.2em;
+	}
+	}
+
+	@media(max-width: 768px) {
+		padding: 30px;
+	}
 
 `
 
+const Header = styled.hr`
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: px solid gray;
+	width: 50%;
+`
+
 const BlogNav = styled.div`
+
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #f2f2f2;
+
 	a{font-family: "Inter";
-		font-size: 20px;
-		background: #32936F;
-		color: white;
+		font-size: 1em;
+		background: white;
+		color: #32936F;
 		padding: 6px;
+		border: 2px solid #32936F;
 		border-radius: 5px;
 		margin-right: 5px;
 		text-decoration: none;
@@ -227,4 +297,6 @@ const NavContent = styled.div`
 `
 
 
-export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow, Select, BlogContent, BlogNav, NavContent}
+
+
+export {Column, Row, MainTitle, Projects, Card, LinkButton, Nav, ResponsiveRow, Select, BlogContent, BlogNav, NavContent, HeadingContent, BlogText, Header}
